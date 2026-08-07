@@ -3,26 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hoopie Loopie</title>
+  <title>Hoopie Loopie — Loop It. Remember It.</title>
+  <meta name="description" content="Hoopie Loopie — a family-friendly memory game for kids and adults.">
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;
-      background:linear-gradient(160deg,#A67DFF,#FF9E3D);color:#fff;display:flex;
-      min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px}
-    .card{max-width:520px}
-    h1{font-size:2.4rem;margin:.2em 0}
-    p{opacity:.96;line-height:1.6;font-size:1.05rem}
-    a{color:#fff;font-weight:700}
-    .tag{opacity:.9;font-size:.95rem}
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px;
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(255,255,255,.18), transparent 55%),
+        linear-gradient(160deg,#A67DFF,#8A5CFF 45%,#FF9E3D);
+    }
+    .back{position:fixed;top:18px;left:20px;color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;opacity:.9}
+    .back:hover{opacity:1;text-decoration:underline}
+    .card{max-width:560px;text-align:center}
+    .emoji{font-size:84px;line-height:1;filter:drop-shadow(0 8px 20px rgba(0,0,0,.25))}
+    h1{font-size:clamp(2.2rem,6vw,3rem);margin:.25em 0 .1em;letter-spacing:-.02em}
+    .tag{font-weight:700;opacity:.92;font-size:1.05rem;letter-spacing:.01em;margin:0}
+    .desc{opacity:.95;line-height:1.6;font-size:1.05rem;margin:18px auto 0;max-width:44ch}
+    .features{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px 0 6px}
+    .features span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);
+      border-radius:999px;padding:6px 13px;font-size:.85rem;font-weight:600}
+    .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+    .links a{
+      text-decoration:none;font-weight:700;font-size:.95rem;color:#5A3000;
+      background:rgba(255,255,255,.95);border-radius:14px;padding:11px 20px;
+      box-shadow:0 6px 16px rgba(0,0,0,.18);transition:transform .15s ease;
+    }
+    .links a:hover{transform:translateY(-2px)}
+    footer{margin-top:30px;opacity:.85;font-size:.85rem}
+    footer a{color:#fff;font-weight:700}
   </style>
 </head>
 <body>
+  <a class="back" href="../">← gvbapps</a>
   <div class="card">
-    <div style="font-size:72px">🎡</div>
+    <div class="emoji">🎡</div>
     <h1>Hoopie Loopie</h1>
     <p class="tag">Loop It. Remember It.</p>
-    <p>A family-friendly memory game for kids and adults — three mini-games,
-       pass-and-play multiplayer, and 80 levels across 8 worlds.</p>
-    <p><a href="./privacy.html">Privacy Policy</a></p>
+    <p class="desc">A family-friendly memory game for kids and adults — three mini-games,
+      pass-and-play multiplayer, and 80 levels across 8 magical worlds.</p>
+    <div class="features">
+      <span>🧠 Memory training</span><span>👨‍👩‍👧 Pass &amp; play</span><span>🌍 8 worlds</span><span>🎈 Ages 4+</span>
+    </div>
+    <div class="links">
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="./data-safety.html">Data Safety</a>
+    </div>
+    <footer>By gvbapps · <a href="mailto:vinosmig@gmail.com">vinosmig@gmail.com</a></footer>
   </div>
 </body>
 </html>
