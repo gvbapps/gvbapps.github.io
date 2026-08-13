@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lekhya — Private, offline money manager for India</title>
+  <meta name="description" content="A personal finance manager that runs entirely on your phone. Spends, budgets, savings, investments and shared expenses — no account, no cloud, no ads, no subscription." />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lekhya — Track every rupee. Keep every secret." />
+  <meta property="og:description" content="A privacy-first, offline personal finance manager for India. Spends, budgets, savings and investments — all on your phone. One-time purchase, forever." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:url" content="https://gvbapps.github.io/lekhya/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Progressive enhancement: if JS is unavailable, never hide content. -->
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────────────────── -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Lekhya home">
+        <span class="brand-mark" aria-hidden="true">ले</span>
+        <span class="brand-name">Lekhya</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#why">Why Lekhya</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="store-badge store-badge--sm" href="#get" data-store="ios" aria-label="Download on the App Store">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-1.85-.92-3.05-.9-1.57.03-3.02 1.02-3.82 2.58-1.63 2.83-.42 7.02 1.17 9.32.78 1.12 1.71 2.38 2.93 2.33 1.18-.05 1.62-.76 3.05-.76 1.42 0 1.83.76 3.05.73 1.26-.02 2.06-1.14 2.83-2.27.89-1.3 1.26-2.56 1.28-2.62-.03-.01-2.45-.94-2.48-3.71z"/><path d="M14.69 4.2c.65-.79 1.09-1.89.97-2.99-.94.04-2.07.63-2.74 1.41-.6.7-1.13 1.81-.99 2.88 1.05.08 2.11-.53 2.76-1.3z"/></svg>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <a class="store-badge store-badge--sm" href="#get" data-store="android" aria-label="Get it on Google Play">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2c-.2.2-.3.5-.3.9v17.8c0 .4.1.7.3.9l.1.1L13 12.1v-.2L3.6 2.2z"/><path d="M16.5 15.3l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.8 2z" fill="currentColor"/><path d="M16.6 15.2L13.4 12 3.6 21.8c.3.4.9.4 1.5.1l11.5-6.7" opacity=".85"/><path d="M16.6 8.8L5.1 2.1c-.6-.3-1.2-.3-1.5.1L13.4 12l3.2-3.2z" opacity=".7"/></svg>
+          <span><small>GET IT ON</small>Google Play</span>
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Privacy-first personal finance · Made in India</p>
+          <h1>Track every rupee.<br /><span class="accent-text">Keep every secret.</span></h1>
+          <p class="lede">Spends, budgets, savings, investments and shared expenses — one calm,
+            organised place for all of it, entirely on your phone. No account to create,
+            nothing sent to a server, ever.</p>
+
+          <div class="cta-row" id="get-hero">
+            <a class="store-badge" href="#get" data-store="ios" aria-label="Download on the App Store">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-1.85-.92-3.05-.9-1.57.03-3.02 1.02-3.82 2.58-1.63 2.83-.42 7.02 1.17 9.32.78 1.12 1.71 2.38 2.93 2.33 1.18-.05 1.62-.76 3.05-.76 1.42 0 1.83.76 3.05.73 1.26-.02 2.06-1.14 2.83-2.27.89-1.3 1.26-2.56 1.28-2.62-.03-.01-2.45-.94-2.48-3.71z"/><path d="M14.69 4.2c.65-.79 1.09-1.89.97-2.99-.94.04-2.07.63-2.74 1.41-.6.7-1.13 1.81-.99 2.88 1.05.08 2.11-.53 2.76-1.3z"/></svg>
+              <span><small>Download on the</small>App Store</span>
+            </a>
+            <a class="store-badge" href="#get" data-store="android" aria-label="Get it on Google Play">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2c-.2.2-.3.5-.3.9v17.8c0 .4.1.7.3.9l.1.1L13 12.1v-.2L3.6 2.2z"/><path d="M16.5 15.3l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.8 2z"/><path d="M16.6 15.2L13.4 12 3.6 21.8c.3.4.9.4 1.5.1l11.5-6.7" opacity=".85"/><path d="M16.6 8.8L5.1 2.1c-.6-.3-1.2-.3-1.5.1L13.4 12l3.2-3.2z" opacity=".7"/></svg>
+              <span><small>GET IT ON</small>Google Play</span>
+            </a>
+          </div>
+          <p class="cta-note">No account · No ads · No subscription · Works fully offline</p>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="phone phone--back">
+            <img src="assets/screens/02-capture.png" alt="Lekhya filing a payment automatically" loading="lazy" />
+          </div>
+          <div class="phone phone--front">
+            <img src="assets/screens/01-home.png" alt="Lekhya home screen showing the monthly summary" loading="eager" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Trust bar ─────────────────────────────────────────────────────── -->
+    <section class="trustbar">
+      <div class="container trustbar-grid reveal">
+        <div><strong>No internet permission</strong><span>Verifiable in app settings</span></div>
+        <div><strong>No analytics SDK</strong><span>Nothing phones home</span></div>
+        <div><strong>DPDP Act 2023</strong><span>Compliant by design</span></div>
+        <div><strong>One-time purchase</strong><span>No subscription, forever</span></div>
+      </div>
+    </section>
+
+    <!-- ── How it works / model ──────────────────────────────────────────── -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">How it works</p>
+          <h2>Your money diary writes itself — on your phone</h2>
+          <p class="sub">A payment happens, Lekhya notices, and files it away neatly. Or you add
+            it yourself in a couple of taps. Every step runs on your device.</p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <h3>A payment happens</h3>
+            <p>UPI, card, netbanking, cash — however you paid. Your bank posts its usual
+              alert, or you tell Lekhya yourself from the Lock Screen.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">2</span>
+            <h3>Lekhya reads it locally</h3>
+            <p>On your device, Lekhya reads the alert into a transaction — merchant, amount
+              and a suggested category. Nothing is uploaded.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">3</span>
+            <h3>It's filed and understood</h3>
+            <p>It lands in your ledger, counts toward your budget, and feeds your trends,
+              your net worth and your goals — all stored, encrypted, on your phone.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── Features ──────────────────────────────────────────────────────── -->
+    <section class="section section--paper" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">What's inside</p>
+          <h2>Everything you need to stay on top of money</h2>
+          <p class="sub">Considered, calm features — no gamification, no nagging, no dark patterns.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="capture"></div>
+            <h3>Spends file themselves</h3>
+            <p>Reads the payment alerts your bank and payment apps already post — UPI,
+              card or netbanking — and files each one in seconds. Or share a bank message
+              into Lekhya, or copy it. All read on your phone, never your inbox.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="budget"></div>
+            <h3>Budgets that forecast</h3>
+            <p>Set overall and per-category budgets with a live month-end projection,
+              so you see where you'll land before you get there.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="insight"></div>
+            <h3>Clear insights</h3>
+            <p>Spending by category, twelve months of spend-vs-income trends, and a tidy
+              monthly summary — facts, never judgement.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="recurring"></div>
+            <h3>Recurring detection</h3>
+            <p>Spots EMIs, subscriptions, and rent automatically, and nudges you only
+              when something's due soon.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="backup"></div>
+            <h3>Encrypted backups</h3>
+            <p>Export an AES-256 <code>.lkh</code> file locked with your own passphrase.
+              Lekhya can't open it. No one can — except you.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="language"></div>
+            <h3>English &amp; हिन्दी</h3>
+            <p>Full Hindi and English, with Indian ₹ lakh and crore formatting that reads the
+              way your bank writes it.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="insight"></div>
+            <h3>Everything you own, in one place</h3>
+            <p>Track gold and silver, stocks, mutual funds and SIPs, fixed deposits and
+              manual accounts — and see your net worth roll up across all of them. Every
+              rate is one you enter, so nothing is ever fetched from anywhere.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="recurring"></div>
+            <h3>Commitments &amp; goals</h3>
+            <p>EMIs, rent and subscriptions detected automatically or added by hand, with
+              reminders before they're due. Savings goals you can link to a real holding.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="capture"></div>
+            <h3>Split with friends</h3>
+            <p>Shared expenses, per-person balances and settle-up suggestions — without
+              anyone needing an account, because there are no accounts.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-ic" data-ic="capture"></div>
+            <h3>One tap to add</h3>
+            <p>Touch and hold the app icon, or add straight from your Lock Screen — a silent
+              shortcut on Android, a Lock Screen widget on iPhone. No amount is ever shown
+              on a locked screen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Privacy / architecture ────────────────────────────────────────── -->
+    <section class="section section--ink" id="privacy">
+      <div class="container privacy-grid">
+        <div class="privacy-copy reveal">
+          <div class="leaflock" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M20 28v-6a12 12 0 0 1 24 0v6" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="14" y="28" width="36" height="28" rx="8" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M32 36c8 4 0 12 0 12s-8-8 0-12z" fill="#72C795"/></svg>
+          </div>
+          <p class="kicker kicker--light">Private by architecture</p>
+          <h2>Not a privacy promise. A privacy design.</h2>
+          <p class="sub sub--light">Most apps ask you to trust a policy. Lekhya removes the
+            need to trust at all — the app has no internet permission, so your data
+            <em>cannot</em> leave your phone, even if we wanted it to.</p>
+          <ul class="proof">
+            <li>No <code>INTERNET</code> permission in the app — check it yourself in Settings → App info</li>
+            <li>No analytics or tracking SDKs (no Firebase, no Mixpanel)</li>
+            <li>No crash reporting that phones home</li>
+            <li>Lekhya never reads your inbox — it has no SMS permission at all</li>
+            <li>Backups are encrypted with your passphrase — only you hold the key</li>
+          </ul>
+        </div>
+        <div class="privacy-art reveal" aria-hidden="true">
+          <div class="flow">
+            <div class="flow-card flow-card--on">
+              <span>Payment alerts</span>
+              <span>Messages you share</span>
+              <span>What you enter</span>
+            </div>
+            <div class="flow-arrow">↓ parsed &amp; stored on your phone</div>
+            <div class="flow-card flow-card--device">
+              <span class="flow-dev">📓 Lekhya</span>
+              <span class="flow-dev-sub">your device</span>
+            </div>
+            <div class="flow-cut">✕ nothing goes out</div>
+            <div class="flow-card flow-card--off">
+              <span>The internet · any server</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why Lekhya / moat ─────────────────────────────────────────────── -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Why Lekhya is different</p>
+          <h2>Built so it can't be tempted to monetise you</h2>
+        </div>
+        <blockquote class="moat reveal">
+          Lekhya <strong>cannot</strong> push you a loan, sell your data, or serve you an ad —
+          not because we promise not to, but because it runs entirely on your phone, has no
+          internet permission, and charges you once, forever.
+        </blockquote>
+        <div class="compare reveal">
+          <div class="compare-row compare-row--head">
+            <span></span><span class="col-us">Lekhya</span><span class="col-them">Typical “free” money app</span>
+          </div>
+          <div class="compare-row">
+            <span>How it makes money</span>
+            <span class="col-us">You, once — ₹249 forever</span>
+            <span class="col-them">Ads, loan referrals, data</span>
+          </div>
+          <div class="compare-row">
+            <span>Where your data lives</span>
+            <span class="col-us">Encrypted, on your phone</span>
+            <span class="col-them">Uploaded to their servers</span>
+          </div>
+          <div class="compare-row">
+            <span>Loan &amp; credit-card pushes</span>
+            <span class="col-us">Never — it can't</span>
+            <span class="col-them">Built into the experience</span>
+          </div>
+          <div class="compare-row">
+            <span>Account &amp; sign-up</span>
+            <span class="col-us">None — just open and use</span>
+            <span class="col-them">Phone, KYC, permissions</span>
+          </div>
+          <div class="compare-row">
+            <span>Designed for</span>
+            <span class="col-us">Your clarity</span>
+            <span class="col-them">Engagement &amp; conversion</span>
+          </div>
+        </div>
+        <p class="moat-foot reveal">It isn't that we promise not to. It's that the architecture and the
+          business model make it impossible — and that's a moat a data-funded competitor can't copy
+          without dismantling how they earn.</p>
+      </div>
+    </section>
+
+    <!-- ── Pricing ───────────────────────────────────────────────────────── -->
+    <section class="section section--paper" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Simple, honest pricing</p>
+          <h2>Pay once. Yours forever.</h2>
+          <p class="sub">No subscription. No trial that auto-charges. No “premium” that holds your
+            own data hostage.</p>
+        </div>
+        <div class="price-grid">
+          <article class="price reveal">
+            <h3>Free</h3>
+            <p class="price-tag">₹0</p>
+            <ul>
+              <li>Payments filed automatically</li>
+              <li>Monthly budget, alerts &amp; safe-to-spend</li>
+              <li>12 months of spend-vs-income trends</li>
+              <li>Recurring detection &amp; Money Story</li>
+              <li>Encrypted backups &amp; CSV export</li>
+              <li>App Lock, dark mode, green or blue</li>
+              <li>English &amp; हिन्दी</li>
+              <li>Fully offline &amp; private</li>
+            </ul>
+            <a class="btn btn--ghost" href="#get">Start free</a>
+          </article>
+          <article class="price price--pro reveal">
+            <span class="pro-flag">✦ Pro</span>
+            <h3>Lekhya Pro</h3>
+            <p class="price-tag">₹249 <small>one-time, <em>forever</em></small></p>
+            <ul>
+              <li>Everything in Free</li>
+              <li>Per-category budgets &amp; custom categories</li>
+              <li>Savings: gold, stocks, funds, SIPs, FDs</li>
+              <li>Goals linked to a real holding</li>
+              <li>Bill, EMI, SIP &amp; FD reminders</li>
+              <li>Split groups &amp; CSV import</li>
+              <li>Year-in-review Money Story</li>
+            </ul>
+            <p class="price-note">Free to try for 7 days. No card, nothing to cancel.</p>
+            <a class="btn btn--solid" href="#get">Get Lekhya, then upgrade</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Final CTA ─────────────────────────────────────────────────────── -->
+    <section class="section section--ink final" id="get">
+      <div class="container final-inner reveal">
+        <span class="brand-mark brand-mark--lg" aria-hidden="true">ले</span>
+        <h2>Your ledger is ready</h2>
+        <p class="sub sub--light">Track every rupee, keep every secret. Download Lekhya and start
+          in seconds — no account needed.</p>
+        <div class="cta-row cta-row--center">
+          <a class="store-badge store-badge--light" href="#" data-store="ios" aria-label="Download on the App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-1.85-.92-3.05-.9-1.57.03-3.02 1.02-3.82 2.58-1.63 2.83-.42 7.02 1.17 9.32.78 1.12 1.71 2.38 2.93 2.33 1.18-.05 1.62-.76 3.05-.76 1.42 0 1.83.76 3.05.73 1.26-.02 2.06-1.14 2.83-2.27.89-1.3 1.26-2.56 1.28-2.62-.03-.01-2.45-.94-2.48-3.71z"/><path d="M14.69 4.2c.65-.79 1.09-1.89.97-2.99-.94.04-2.07.63-2.74 1.41-.6.7-1.13 1.81-.99 2.88 1.05.08 2.11-.53 2.76-1.3z"/></svg>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+          <a class="store-badge store-badge--light" href="https://play.google.com/store/apps/details?id=com.btech.lekhya" data-store="android" aria-label="Get it on Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2c-.2.2-.3.5-.3.9v17.8c0 .4.1.7.3.9l.1.1L13 12.1v-.2L3.6 2.2z"/><path d="M16.5 15.3l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.8 2z"/><path d="M16.6 15.2L13.4 12 3.6 21.8c.3.4.9.4 1.5.1l11.5-6.7" opacity=".85"/><path d="M16.6 8.8L5.1 2.1c-.6-.3-1.2-.3-1.5.1L13.4 12l3.2-3.2z" opacity=".7"/></svg>
+            <span><small>GET IT ON</small>Google Play</span>
+          </a>
+        </div>
+        <p class="tagline-hi" lang="hi">आपका पैसा। आपकी लेख्य। किसी को नहीं पता।</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">ले</span><span class="brand-name">Lekhya</span></a>
+        <p>That which is written — your ledger, kept private, kept simple.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="data-safety.html">Data Safety</a>
+        <a href="security.html">Security</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.hi.html" lang="hi">हिन्दी</a>
+      </nav>
+    </div>
+    <div class="container footer-base">
+      <span>© <span id="year">2026</span> Lekhya · Made in India</span>
+      <span class="footer-note">No account · No cloud · No tracking</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

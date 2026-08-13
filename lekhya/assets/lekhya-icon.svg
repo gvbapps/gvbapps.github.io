@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@600&amp;display=swap');
+    </style>
+    <!-- Subtle depth gradient on Ink Blue background -->
+    <radialGradient id="bg-grad" cx="50%" cy="38%" r="62%">
+      <stop offset="0%"   stop-color="#21497A"/>
+      <stop offset="100%" stop-color="#1A3A5C"/>
+    </radialGradient>
+    <!-- Soft inner glow behind glyph -->
+    <radialGradient id="glow" cx="50%" cy="55%" r="40%">
+      <stop offset="0%"   stop-color="#E8A838" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#E8A838" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="0" y="0" width="1024" height="1024" rx="210" ry="210" fill="url(#bg-grad)"/>
+
+  <!-- Subtle gold glow behind glyph -->
+  <rect x="0" y="0" width="1024" height="1024" rx="210" ry="210" fill="url(#glow)"/>
+
+  <!-- Inner Turmeric Gold border — hairline, echoes a gilt-edge notebook -->
+  <rect x="18" y="18" width="988" height="988" rx="194" ry="194"
+        fill="none" stroke="#E8A838" stroke-width="3" opacity="0.45"/>
+
+  <!-- Devanagari ले glyph — Turmeric Gold, SemiBold, centred -->
+  <text
+    x="512"
+    y="680"
+    font-family="'Noto Sans Devanagari', 'Mukta', 'Arial Unicode MS', sans-serif"
+    font-size="530"
+    font-weight="600"
+    fill="#E8A838"
+    text-anchor="middle"
+  >ले</text>
+
+  <!-- Ruled baseline — pen-on-paper motif, Turmeric Gold at 55% opacity -->
+  <rect x="195" y="716" width="634" height="8" rx="4" fill="#E8A838" opacity="0.55"/>
+
+  <!-- Second faint rule below — reinforces notebook feel -->
+  <rect x="260" y="738" width="504" height="4" rx="2" fill="#E8A838" opacity="0.22"/>
+</svg>

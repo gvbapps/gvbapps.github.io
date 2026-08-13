@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Lekhya</title>
+  <meta name="description" content="Lekhya collects no data. The app has no internet permission, so your financial information cannot leave your phone." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="legal.css" />
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Lekhya home">
+      <span class="brand-mark" aria-hidden="true">ले</span>
+      <span class="brand-name">Lekhya</span>
+    </a>
+  </div>
+</header>
+
+<main class="legal">
+
+  <div class="legal-head">
+    <h1>Privacy Policy</h1>
+    <p class="legal-meta">Effective 13 August 2026 · Version 1.0 · Applies to Lekhya for Android and iOS</p>
+    <a class="legal-lang" href="privacy.hi.html" lang="hi">हिन्दी में पढ़ें</a>
+  </div>
+
+  <div class="legal-callout">
+    <p><strong>The short version: Lekhya collects nothing.</strong></p>
+    <p>There is no account, no server and no analytics. The Android app ships without the
+      <code>INTERNET</code> permission, and the app blocks network access at runtime on both
+      platforms — so your financial information cannot leave your device, even by accident.
+      This is not a promise about how we behave. It is a property of how the app is built,
+      and you can verify it yourself.</p>
+  </div>
+
+  <div class="legal-toc">
+    <p>On this page</p>
+    <ul>
+      <li><a href="#collect">1. What we collect</a></li>
+      <li><a href="#device">2. What stays on your device</a></li>
+      <li><a href="#verify">3. How you can verify this</a></li>
+      <li><a href="#permissions">4. Permissions and why they exist</a></li>
+      <li><a href="#third-parties">5. Third parties</a></li>
+      <li><a href="#security">6. How your data is protected</a></li>
+      <li><a href="#rights">7. Your rights</a></li>
+      <li><a href="#children">8. Children</a></li>
+      <li><a href="#changes">9. Changes to this policy</a></li>
+      <li><a href="#contact">10. Contact</a></li>
+    </ul>
+  </div>
+
+  <h2 id="collect">1. What we collect</h2>
+
+  <p><strong>Nothing.</strong> We do not collect, receive, store, transmit, sell, rent, share,
+    broker or cross-sell any information about you or your money.</p>
+
+  <p>Specifically, Lekhya does not collect:</p>
+  <ul>
+    <li>Your name, email address, phone number or any other identifier</li>
+    <li>Your transactions, balances, budgets, goals, holdings or any financial figure</li>
+    <li>Your bank messages or payment notifications</li>
+    <li>Your location, contacts, photos or device identifiers</li>
+    <li>Usage analytics, crash reports, advertising identifiers or behavioural data</li>
+  </ul>
+
+  <p>There is no sign-up, no login and no profile. We have no database of users, because
+    there is nothing for us to put in one. We could not identify you if we wanted to.</p>
+
+  <p>We will never use your information to market anything to you, and we will never send
+    you promotional email — we do not have your address.</p>
+
+  <h2 id="device">2. What stays on your device</h2>
+
+  <p>Everything Lekhya knows lives in a private database on your phone, readable only by the
+    app. That includes your transactions, categories, budgets, savings goals, accounts,
+    investment and asset entries, shared-expense groups, bank-message templates, reminders
+    and app settings.</p>
+
+  <p>You control all of it. From within the app you can export it as an encrypted
+    <code>.lkh</code> backup or as a CSV file, restore it, edit it, or delete it. Uninstalling
+    Lekhya removes it permanently.</p>
+
+  <h2 id="verify">3. How you can verify this</h2>
+
+  <p>You do not have to take our word for any of the above.</p>
+
+  <ul>
+    <li><strong>Android:</strong> open <em>Settings → Apps → Lekhya → Permissions</em>. There is no
+      internet or network permission listed, because the released app does not request one.
+      An Android app without that permission is prevented by the operating system from opening
+      any network connection.</li>
+    <li><strong>Both platforms:</strong> the app installs a network block as the very first thing
+      it does at startup. Any attempt by any part of the code to open a network connection
+      throws an error instead of connecting. This is covered by an automated test that must
+      pass before any release is built.</li>
+    <li><strong>Offline test:</strong> turn on aeroplane mode. Lekhya works exactly the same,
+      because it never needed a connection.</li>
+  </ul>
+
+  <h2 id="permissions">4. Permissions and why they exist</h2>
+
+  <p>Lekhya asks for as little as possible, and every permission is optional except where
+    noted. You can decline any of them and still use the app.</p>
+
+  <div class="legal-table-wrap">
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>Platform</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Notification access</td><td>Android</td>
+          <td>Reads the payment alerts your bank and UPI apps post on your device, so a spend can
+            be recorded without you typing it. The alert is matched against patterns on your
+            phone. Nothing is sent anywhere. Optional.</td>
+        </tr>
+        <tr>
+          <td>Notifications</td><td>Both</td>
+          <td>Shows your budget alerts, daily reminder and bill reminders. Every one is created
+            on your phone. Optional.</td>
+        </tr>
+        <tr>
+          <td>Biometrics / Face ID</td><td>Both</td>
+          <td>Unlocks the app when you turn on App Lock. Handled entirely by your operating
+            system — Lekhya never sees your fingerprint, face or passcode. Optional.</td>
+        </tr>
+        <tr>
+          <td>Files</td><td>Both</td>
+          <td>Only when you choose to save a backup or CSV, or open one to restore. Lekhya does
+            not browse your storage.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Lekhya does <strong>not</strong> request SMS, camera, photo library, microphone,
+    location, contacts or calendar access. It cannot read your messages inbox — that
+    permission is not in the app.</p>
+
+  <h2 id="third-parties">5. Third parties</h2>
+
+  <p>Lekhya contains no advertising networks, no analytics services and no crash-reporting
+    services. There is no Firebase, no Mixpanel, no Amplitude, no Crashlytics and no
+    advertising SDK of any kind. Its fonts are bundled inside the app rather than downloaded,
+    so even loading a screen contacts nobody.</p>
+
+  <p>There is exactly one exception, and it is not Lekhya reaching the internet:</p>
+
+  <p><strong>Purchases.</strong> If you buy Lekhya Pro or leave a tip, the payment is handled
+    entirely by <strong>Google Play</strong> or the <strong>Apple App Store</strong>, in their
+    app, under their privacy policy. Lekhya never sees your card, your billing address or your
+    identity — it only receives a yes-or-no answer about whether the purchase succeeded, and
+    stores that answer on your device. Please refer to
+    <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a> and
+    <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a> for
+    how they handle payments.</p>
+
+  <p>Crash information, if the app ever fails, is written to a small local file on your device
+    and is never transmitted. You can delete it by clearing the app's storage.</p>
+
+  <h2 id="security">6. How your data is protected</h2>
+
+  <ul>
+    <li><strong>Encrypted backups.</strong> A <code>.lkh</code> backup is encrypted with
+      AES-256-GCM using a key derived from a passphrase you choose, via PBKDF2 with 310,000
+      iterations. We cannot open your backup. Nobody can, without your passphrase.</li>
+    <li><strong>Bank message text is encrypted at rest</strong> using a key held in the Android
+      Keystore or the iOS Keychain — hardware-backed storage that other apps cannot read.</li>
+    <li><strong>Card numbers are never stored in full.</strong> Any long run of digits is masked
+      before it is saved, so at most the last four digits are kept. Lekhya never stores a CVV
+      or a PIN, and never asks for one.</li>
+    <li><strong>Excluded from cloud backup.</strong> The app's database is explicitly excluded
+      from Android's automatic cloud backup and from device-to-device transfer, so your
+      finances cannot leak through a phone migration.</li>
+    <li><strong>App Lock</strong> can require your fingerprint, face or device PIN each time the
+      app opens, and the app hides its contents in the task switcher.</li>
+  </ul>
+
+  <h2 id="rights">7. Your rights</h2>
+
+  <p>India's Digital Personal Data Protection Act, 2023 gives you rights over personal data a
+    company holds about you — to access it, correct it, have it erased, and to complain.</p>
+
+  <p>Lekhya is designed so those rights are satisfied by architecture rather than by a request
+    form: <strong>we hold no personal data about you</strong>, so there is nothing for us to
+    disclose, correct, erase or transfer. You exercise every one of these rights directly, in
+    the app, without asking anyone's permission and without waiting:</p>
+
+  <ul>
+    <li><strong>Access</strong> — export everything as CSV or as a <code>.lkh</code> backup.</li>
+    <li><strong>Correction</strong> — edit or delete any entry at any time.</li>
+    <li><strong>Erasure</strong> — delete entries in the app, or uninstall it to remove
+      everything.</li>
+    <li><strong>Portability</strong> — the CSV export opens in any spreadsheet application.</li>
+  </ul>
+
+  <p>If you believe we hold data about you, please write to us (§10) and we will respond.
+    We expect the answer to be that we do not, and we would like the chance to prove it.</p>
+
+  <h2 id="children">8. Children</h2>
+
+  <p>Lekhya is a personal finance tool intended for adults and is listed for users aged 18 and
+    over. It is not directed at children, and since it collects no data, it collects no data
+    from children either.</p>
+
+  <h2 id="changes">9. Changes to this policy</h2>
+
+  <p>If this policy changes we will update the version and effective date at the top of this
+    page and keep a record of what changed below. Because the no-collection guarantee is built
+    into the app rather than into a promise, any change that weakened it would require shipping
+    a different app — and we would say so plainly in the release notes rather than quietly
+    editing this page.</p>
+
+  <div class="legal-table-wrap">
+    <table>
+      <thead><tr><th>Version</th><th>Date</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>1.0</td><td>13 August 2026</td><td>First publication, for the 1.0.0 release.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="contact">10. Contact</h2>
+
+  <p>Questions about this policy, or about privacy in Lekhya:</p>
+    <p><a href="mailto:vinosmig@gmail.com">vinosmig@gmail.com</a></p>
+  <p>We aim to reply within five working days.</p>
+
+  <p class="legal-updated">
+    Lekhya · Made in India ·
+    <a href="index.html">Home</a> ·
+    <a href="terms.html">Terms</a> ·
+    <a href="support.html">Support</a> ·
+    <a href="data-safety.html">Data safety</a> ·
+    <a href="security.html">Security</a>
+  </p>
+
+</main>
+
+</body>
+</html>

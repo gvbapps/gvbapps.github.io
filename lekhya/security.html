@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security — Lekhya</title>
+  <meta name="description" content="How Lekhya is built so your financial data cannot leave your phone: four independent layers, AES-256-GCM backups, and hardware-backed keys." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="legal.css" />
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Lekhya home">
+      <span class="brand-mark" aria-hidden="true">ले</span>
+      <span class="brand-name">Lekhya</span>
+    </a>
+  </div>
+</header>
+
+<main class="legal">
+
+  <div class="legal-head">
+    <h1>Security</h1>
+    <p class="legal-meta">How the guarantee is built, for people who want the detail</p>
+    <a class="legal-lang" href="security.hi.html" lang="hi">हिन्दी में पढ़ें</a>
+  </div>
+
+  <div class="legal-callout">
+    <p>Most apps ask you to trust a privacy policy. A policy is a statement of intent — it can be
+      revised, and you have no way to audit whether it is being honoured.</p>
+    <p>Lekhya's approach is to remove the need to trust us. If the app has no way to reach the
+      internet, then what we intend stops mattering.</p>
+  </div>
+
+  <h2>Four independent layers</h2>
+
+  <p>Any one of these would prevent your data leaving. All four are in place, and each is
+    checked before a release is built.</p>
+
+  <div class="legal-table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Layer</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>No <code>INTERNET</code> permission</td>
+          <td>The released Android app does not declare it. Android then refuses, at the operating
+            system level, to let the app open any network connection — regardless of what its code
+            tries to do. Check it yourself: <em>Settings → Apps → Lekhya → Permissions</em>.</td>
+        </tr>
+        <tr>
+          <td>2</td><td>Runtime network block</td>
+          <td>The first thing the app does at startup — before any screen is drawn — is install a
+            handler that makes every attempt to create a network client throw an error instead.
+            This covers iOS too, where there is no equivalent permission to withhold.</td>
+        </tr>
+        <tr>
+          <td>3</td><td>No network code</td>
+          <td>There are no HTTP calls anywhere in the app, and no networking library is a
+            dependency. There is no code to accidentally re-enable.</td>
+        </tr>
+        <tr>
+          <td>4</td><td>Automated tests</td>
+          <td>A test asserts that attempting a network connection fails. A release check scans the
+            source for network permissions, hard-coded URLs and networking imports. If any appear,
+            the release is blocked.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The one exception, stated plainly</h3>
+
+  <p>Buying Lekhya Pro obviously requires a network. That happens in <strong>Google Play's or
+    Apple's app</strong>, in their process, using their permissions — not ours. Lekhya asks the
+    store a question through an on-device channel and receives yes or no. It never sees your card,
+    your billing address or your identity, and it still cannot open a connection of its own.</p>
+
+  <h2>Encryption</h2>
+
+  <div class="legal-table-wrap">
+    <table>
+      <thead><tr><th>What</th><th>How</th></tr></thead>
+      <tbody>
+        <tr><td>Backup files (<code>.lkh</code>)</td><td>AES-256-GCM. The key is derived from your passphrase with PBKDF2 at 310,000 iterations and a random 16-byte salt. The passphrase is never stored anywhere.</td></tr>
+        <tr><td>Bank message text at rest</td><td>AES-256-GCM, with a random key held in the Android Keystore or iOS Keychain — hardware-backed storage no other app can read.</td></tr>
+        <tr><td>Card numbers</td><td>Never stored in full. Any run of five or more digits is masked before saving, so at most the last four survive. No CVV or PIN is ever stored, or asked for.</td></tr>
+        <tr><td>OS cloud backup</td><td>The database is explicitly excluded from Android's automatic backup and from device-to-device transfer, so your finances cannot leak during a phone migration.</td></tr>
+        <tr><td>App Lock</td><td>Fingerprint, face or device PIN, handled entirely by the OS. Lekhya never stores a PIN of its own. The app also hides its contents in the task switcher.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legal-callout">
+    <p><strong>The consequence of real encryption:</strong> if you lose your backup passphrase, the
+      backup is unrecoverable. Not "difficult to recover" — unrecoverable, by us and by anyone.
+      An app that could recover it for you would be an app that could read it without you.</p>
+  </div>
+
+  <h2>What is not in the app</h2>
+
+  <ul>
+    <li>No analytics — no Firebase, Mixpanel, Amplitude or anything similar</li>
+    <li>No crash reporting that transmits. Crash details are written to a small local file, capped
+      in size, that never leaves the device</li>
+    <li>No advertising SDK. Google's advertising initialiser, which arrives as a side effect of the
+      billing library, is explicitly stripped from the app</li>
+    <li>No remote configuration or feature flags — the app cannot be changed from outside</li>
+    <li>No downloaded fonts or icons. They are bundled, so even rendering a screen contacts nobody</li>
+    <li>No copyleft dependencies — every third-party library is under a permissive licence, and an
+      automated check blocks any that is not</li>
+  </ul>
+
+  <h2>Verify it yourself</h2>
+
+  <ol>
+    <li><strong>Check the permissions.</strong> <em>Settings → Apps → Lekhya → Permissions</em> on
+      Android. No internet permission is listed.</li>
+    <li><strong>Inspect the published file.</strong> <code>aapt2 dump permissions app-release.apk</code>
+      lists everything the app can do. <code>android.permission.INTERNET</code> is not there.</li>
+    <li><strong>Cut it off.</strong> Turn on aeroplane mode and use the app normally. Nothing
+      changes, because nothing was being sent.</li>
+    <li><strong>Watch the traffic.</strong> Point a network monitor at the device. Lekhya generates
+      none.</li>
+  </ol>
+
+  <h2>Reporting a security issue</h2>
+
+  <p>If you believe you have found a vulnerability — especially anything that would let data leave
+    the device — please tell us before telling anyone else, and we will fix it and credit you if
+    you would like.</p>
+    <p><a href="mailto:vinosmig@gmail.com">vinosmig@gmail.com</a></p>
+
+  <p class="legal-updated">
+    Lekhya · Made in India ·
+    <a href="index.html">Home</a> ·
+    <a href="privacy.html">Privacy</a> ·
+    <a href="terms.html">Terms</a> ·
+    <a href="support.html">Support</a> ·
+    <a href="data-safety.html">Data safety</a>
+  </p>
+
+</main>
+
+</body>
+</html>

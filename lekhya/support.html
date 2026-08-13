@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Lekhya</title>
+  <meta name="description" content="Help with Lekhya — setting up automatic capture, restoring Pro, backups, CSV import, and why the app has no internet access." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="legal.css" />
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Lekhya home">
+      <span class="brand-mark" aria-hidden="true">ले</span>
+      <span class="brand-name">Lekhya</span>
+    </a>
+  </div>
+</header>
+
+<main class="legal">
+
+  <div class="legal-head">
+    <h1>Support</h1>
+    <p class="legal-meta">Lekhya 1.0.0 · Android and iOS</p>
+    <a class="legal-lang" href="support.hi.html" lang="hi">हिन्दी में पढ़ें</a>
+  </div>
+
+  <div class="legal-callout">
+    <p><strong>Write to us:</strong>
+            <a href="mailto:vinosmig@gmail.com">vinosmig@gmail.com</a></p>
+    <p>We aim to reply within five working days. Lekhya is made by a very small team, so please
+      be patient — every message is read by a person.</p>
+    <p><strong>Please never send us a screenshot containing your real balances, account numbers
+      or bank messages.</strong> We do not want your financial data, and we cannot look anything
+      up for you — we have no copy of it. Describe what happened instead.</p>
+  </div>
+
+  <h2>Getting payments to record themselves</h2>
+
+  <h3>Android — notification capture (recommended)</h3>
+  <p>Open <em>Settings → Transaction Capture</em> in Lekhya and turn on notification access.
+    Android will take you to a system screen where you grant Lekhya permission to read
+    notifications. After that, when your bank or UPI app posts a payment alert, Lekhya files it
+    automatically.</p>
+  <p>If nothing is being captured: confirm the permission is still granted (some phones revoke
+    it after an update or when battery optimisation kicks in), and check that your bank's alerts
+    actually appear in your notification shade — Lekhya can only see what your phone shows you.</p>
+
+  <h3>iPhone — share or copy</h3>
+  <p>Apple does not let any app read your Messages or another app's notifications. This is an
+    iOS restriction and applies to every app, not just Lekhya. On iPhone you have four ways:</p>
+  <ul>
+    <li><strong>Share:</strong> open the bank message in Messages, tap share, choose Lekhya.</li>
+    <li><strong>Copy:</strong> copy the message; when you next open Lekhya it offers to file it.
+      The text reaches the app only when you tap the system paste button, so nothing is read
+      behind your back.</li>
+    <li><strong>Shortcuts:</strong> build an automation using the <code>lekhya://</code> URL
+      scheme.</li>
+    <li><strong>Type it:</strong> the + button, or the Lock Screen widget.</li>
+  </ul>
+
+  <h3>Adding a spend in one tap</h3>
+  <p>Both platforms: <strong>touch and hold the Lekhya icon</strong> on your home screen and pick
+    "Add expense" or "Add income".</p>
+  <p><strong>From the Lock Screen</strong> — on Android, turn on <em>Settings → Lock screen
+    quick-add</em> and a silent, permanent shortcut sits in your notification shade. On iPhone,
+    touch and hold the Lock Screen → <em>Customise</em> → <em>Add widgets</em> → Lekhya.</p>
+
+  <h3>A message that isn't recognised</h3>
+  <p>Use <em>Settings → Teach Lekhya</em>. Paste a sample message and Lekhya learns the pattern
+    for that bank. You can review and edit everything it knows under <em>Taught patterns</em>.</p>
+
+  <h2>Lekhya Pro</h2>
+
+  <h3>What is free, and what Pro adds</h3>
+  <p>Capture, transactions, analytics, the monthly budget, recurring detection, Money Story,
+    reminders, backups, App Lock, dark mode, the green/blue theme, the Android widget, and both
+    languages are all <strong>free</strong>.</p>
+  <p>Pro (<strong>₹249, one time, forever</strong>) adds per-category budgets, custom categories,
+    bill/EMI and SIP/FD reminders, the savings and investment trackers, split groups, CSV import
+    and the year-in-review Money Story.</p>
+  <p>Everything is free to try for <strong>7 days</strong> from install. There is nothing to
+    cancel — the trial simply ends.</p>
+
+  <h3>I paid but Pro isn't showing</h3>
+  <p><em>Settings → Restore purchase</em>. This asks the store whether your account owns Pro and
+    re-enables it. It works after a reinstall or on a new phone, as long as you are signed in
+    with the same Google or Apple account you bought with.</p>
+
+  <h3>Refunds</h3>
+  <p>Refunds are handled by Google Play or Apple, not by us — we never receive your payment
+    directly. Contact the store you bought from. If your problem is something we can fix, please
+    write to us first.</p>
+
+  <h2>Your data</h2>
+
+  <h3>Backing up</h3>
+  <p><em>Settings → Backup</em> → export an encrypted <code>.lkh</code> file. You choose a
+    passphrase; the file is useless to anyone without it. Keep it wherever you like — cloud
+    storage is fine, because the file is encrypted before it leaves the app.</p>
+
+  <div class="legal-callout">
+    <p><strong>If you forget the passphrase, the backup cannot be opened — by us, by you, or by
+      anyone.</strong> There is no reset. Please write it down somewhere safe.</p>
+  </div>
+
+  <h3>Restoring</h3>
+  <p><em>Settings → Backup → Restore</em>, or simply open a <code>.lkh</code> file on your phone
+    and choose Lekhya. You will be asked for the passphrase.</p>
+
+  <h3>Moving to a new phone</h3>
+  <p>Export a backup on the old phone, install Lekhya on the new one, restore. Your data is
+    deliberately excluded from Android's automatic cloud backup and from device-to-device
+    transfer, so this manual step is the only way — and that is the point.</p>
+
+  <h3>Importing holdings</h3>
+  <p>Gold and silver, stocks, mutual funds and fixed deposits can be imported from CSV (Pro).
+    The exact column formats are documented in the app's import screen, which also previews every
+    row and flags errors before anything is saved.</p>
+
+  <h3>Deleting everything</h3>
+  <p>Delete individual entries in the app, or uninstall Lekhya to remove all of it. Since nothing
+    was ever uploaded, there is no account to close and no server-side copy to request the
+    deletion of.</p>
+
+  <h2>Common questions</h2>
+
+  <h3>Why does the app have no internet permission?</h3>
+  <p>Because it does not need one, and because removing it turns a promise into a fact. Check
+    <em>Settings → Apps → Lekhya → Permissions</em> on Android and you will not find one. See the
+    <a href="security.html">security page</a> for the full explanation.</p>
+
+  <h3>Then how do purchases work?</h3>
+  <p>Google Play and the App Store handle the payment in <em>their</em> app, in their own process.
+    Lekhya only receives a yes or no. See the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>Does Lekhya connect to my bank?</h3>
+  <p>No. It never asks for bank credentials and could not use them if you gave them. It reads the
+    alerts and messages already on your phone, and nothing else.</p>
+
+  <h3>Can I use it in Hindi?</h3>
+  <p>Yes — <em>Settings → Language</em>. The whole app is translated, and it is independent of
+    your phone's language, so you can run a Hindi Lekhya on an English phone.</p>
+
+  <h3>Where are dark mode and the app colour?</h3>
+  <p><em>Settings → Language &amp; Appearance</em>. Both are free.</p>
+
+  <h3>I found a bug</h3>
+  <p>Please tell us what you did, what you expected, and what happened instead, plus your phone
+    model and Android/iOS version. That is usually enough. Again — no screenshots of real
+    financial data, please.</p>
+
+  <p class="legal-updated">
+    Lekhya · Made in India ·
+    <a href="index.html">Home</a> ·
+    <a href="privacy.html">Privacy</a> ·
+    <a href="terms.html">Terms</a> ·
+    <a href="data-safety.html">Data safety</a> ·
+    <a href="security.html">Security</a>
+  </p>
+
+</main>
+
+</body>
+</html>

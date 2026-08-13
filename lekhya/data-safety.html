@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Safety — Lekhya</title>
+  <meta name="description" content="Exactly what Lekhya declares to Google Play and Apple about data collection — and why every answer is 'none'." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="legal.css" />
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Lekhya home">
+      <span class="brand-mark" aria-hidden="true">ले</span>
+      <span class="brand-name">Lekhya</span>
+    </a>
+  </div>
+</header>
+
+<main class="legal">
+
+  <div class="legal-head">
+    <h1>Data Safety</h1>
+    <p class="legal-meta">The same answers we give Google Play and Apple, in plain language</p>
+    <a class="legal-lang" href="data-safety.hi.html" lang="hi">हिन्दी में पढ़ें</a>
+  </div>
+
+  <p>Both app stores make developers declare what data their app collects and shares. Those
+    declarations appear on our store listings as "No data collected" and "Data Not Collected".
+    This page shows the underlying answers, so you can hold us to them.</p>
+
+  <h2>Google Play — Data safety section</h2>
+
+  <div class="legal-table-wrap">
+    <table>
+      <thead><tr><th>Question</th><th>Our answer</th></tr></thead>
+      <tbody>
+        <tr><td>Does your app collect or share any of the required user data types?</td><td><strong>No</strong></td></tr>
+        <tr><td>Data collected</td><td><strong>None</strong></td></tr>
+        <tr><td>Data shared with third parties</td><td><strong>None</strong></td></tr>
+        <tr><td>Is data encrypted in transit?</td><td>Not applicable — there is no transit</td></tr>
+        <tr><td>Can users request data deletion?</td><td>All data is on the user's device. Deleting it in the app, or uninstalling, removes it. There is no server-side copy to request the deletion of.</td></tr>
+        <tr><td>Data collected by third-party SDKs</td><td><strong>None.</strong> Google Play Billing processes a purchase, but that data is collected by Google under Google's policy, not by Lekhya.</td></tr>
+        <tr><td>Contains ads</td><td><strong>No</strong></td></tr>
+        <tr><td>In-app purchases</td><td>Yes — one-time products only. No subscriptions.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Apple App Store — Privacy "nutrition label"</h2>
+
+  <p>Every category is marked <strong>Data Not Collected</strong>:</p>
+
+  <div class="legal-table-wrap">
+    <table>
+      <thead><tr><th>Category</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Contact Info</td><td>Not collected</td></tr>
+        <tr><td>Health &amp; Fitness</td><td>Not collected</td></tr>
+        <tr><td>Financial Info</td><td>Not collected</td></tr>
+        <tr><td>Location</td><td>Not collected</td></tr>
+        <tr><td>Sensitive Info</td><td>Not collected</td></tr>
+        <tr><td>Contacts</td><td>Not collected</td></tr>
+        <tr><td>User Content</td><td>Not collected</td></tr>
+        <tr><td>Browsing History</td><td>Not collected</td></tr>
+        <tr><td>Search History</td><td>Not collected</td></tr>
+        <tr><td>Identifiers</td><td>Not collected</td></tr>
+        <tr><td>Purchases</td><td>Not collected</td></tr>
+        <tr><td>Usage Data</td><td>Not collected</td></tr>
+        <tr><td>Diagnostics</td><td>Not collected</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legal-callout">
+    <p><strong>Why "Financial Info" says not collected, when Lekhya is a finance app.</strong></p>
+    <p>Your transactions and balances live in a private database on your phone. "Collected", in
+      both stores' definitions, means transmitted off the device to the developer. Nothing is.
+      Lekhya has no server to transmit to, and on Android no permission to transmit with.</p>
+    <p>The same applies to "Purchases": the store, not Lekhya, records what you bought.</p>
+  </div>
+
+  <h2>Which permissions we ask for</h2>
+
+  <p>Every one of these is optional, and all of them work entirely on your device. See the
+    <a href="privacy.html#permissions">privacy policy</a> for the details.</p>
+
+  <ul>
+    <li>Notification access (Android) — read payment alerts to record a spend</li>
+    <li>Notifications — show your budget alerts and reminders</li>
+    <li>Biometrics / Face ID — App Lock</li>
+    <li>Files — only when you save or open a backup or CSV</li>
+  </ul>
+
+  <p>Lekhya asks for <strong>no</strong> SMS, camera, photo, microphone, location, contacts
+    or calendar access, and the Android release has <strong>no internet permission at
+    all</strong>.</p>
+
+  <h2>Independent verification</h2>
+
+  <p>These are declarations, and declarations should be checkable. On Android you can inspect
+    the permissions of the exact file we publish:</p>
+
+  <p><code>aapt2 dump permissions app-release.apk</code></p>
+
+  <p>There is no <code>android.permission.INTERNET</code> in the output. See the
+    <a href="security.html">security page</a> for the other three layers that back this up.</p>
+
+  <p class="legal-updated">
+    Lekhya · Made in India ·
+    <a href="index.html">Home</a> ·
+    <a href="privacy.html">Privacy</a> ·
+    <a href="terms.html">Terms</a> ·
+    <a href="support.html">Support</a> ·
+    <a href="security.html">Security</a>
+  </p>
+
+</main>
+
+</body>
+</html>

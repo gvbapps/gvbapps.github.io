@@ -1,0 +1,143 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Lekhya — shared styling for the legal / support pages.
+
+   Loaded *after* styles.css, which owns the :root tokens, @font-face rules,
+   header and footer. This file only adds the prose layout those pages need,
+   so the tokens stay defined in exactly one place.
+
+   Same constraints as the rest of the site: no external requests, no build
+   step, and every path relative — the site is served from a GitHub Pages
+   sub-path (/lekhya/), where a root-absolute /asset.css would 404.
+   ───────────────────────────────────────────────────────────────────────── */
+
+.legal {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 20px 72px;
+}
+
+.legal-head {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+.legal-head h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.15;
+  margin: 0 0 12px;
+  color: var(--forest);
+}
+
+.legal-meta {
+  font-size: 14px;
+  color: var(--text-3);
+  margin: 0;
+}
+
+.legal-lang {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+.legal-lang:hover { background: var(--surface-2); }
+
+.legal h2 {
+  font-size: 22px;
+  margin: 40px 0 12px;
+  color: var(--text);
+}
+
+.legal h3 {
+  font-size: 17px;
+  margin: 28px 0 8px;
+  color: var(--text);
+}
+
+.legal p,
+.legal li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-2);
+}
+
+.legal ul, .legal ol { padding-left: 22px; margin: 12px 0; }
+.legal li { margin: 6px 0; }
+.legal strong { color: var(--text); }
+
+.legal a { color: var(--forest); }
+
+/* The one claim every page leans on, called out rather than buried in prose. */
+.legal-callout {
+  background: var(--surface-2);
+  border-left: 3px solid var(--forest);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 24px 0;
+}
+
+.legal-callout p:last-child { margin-bottom: 0; }
+.legal-callout p:first-child { margin-top: 0; }
+
+/* Wide tables must scroll inside themselves — the page body never scrolls
+   sideways on a phone. */
+.legal-table-wrap { overflow-x: auto; margin: 20px 0; }
+
+.legal table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 460px;
+  font-size: 15px;
+}
+
+.legal th, .legal td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  color: var(--text-2);
+}
+
+.legal th {
+  color: var(--text);
+  font-weight: 600;
+  background: var(--surface-2);
+}
+
+.legal code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--surface-2);
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: var(--text);
+}
+
+.legal-toc {
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 28px 0;
+}
+
+.legal-toc p { margin: 0 0 8px; font-weight: 600; color: var(--text); }
+.legal-toc ul { margin: 0; }
+
+.legal-updated {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--text-3);
+}
+
+/* Devanagari needs a little more leading than Latin at the same size. */
+html[lang="hi"] .legal p,
+html[lang="hi"] .legal li { line-height: 1.85; }
