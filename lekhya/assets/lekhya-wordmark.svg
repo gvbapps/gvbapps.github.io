@@ -4,8 +4,8 @@
       @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&amp;family=Noto+Sans+Devanagari:wght@500&amp;display=swap');
     </style>
     <radialGradient id="icon-bg" cx="50%" cy="38%" r="62%">
-      <stop offset="0%"   stop-color="#21497A"/>
-      <stop offset="100%" stop-color="#1A3A5C"/>
+      <stop offset="0%"   stop-color="#2D6B4A"/>
+      <stop offset="100%" stop-color="#1E4D35"/>
     </radialGradient>
   </defs>
 
@@ -29,28 +29,28 @@
 
   <!-- ── Wordmark text column ── -->
 
-  <!-- "lekhya" — Plus Jakarta Sans SemiBold, Ink Blue -->
+  <!-- "lekhya" — Plus Jakarta Sans SemiBold, Forest Green -->
   <text
     x="119"
     y="55"
     font-family="'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif"
     font-size="34"
     font-weight="600"
-    fill="#1A3A5C"
+    fill="#1E4D35"
     letter-spacing="0.6"
   >lekhya</text>
 
   <!-- Thin Turmeric Gold accent bar under the Latin wordmark -->
   <rect x="119" y="62" width="178" height="2.5" rx="1.25" fill="#E8A838" opacity="0.7"/>
 
-  <!-- "लेख्य" — Noto Sans Devanagari Medium, Ink Blue at 68% -->
+  <!-- "लेख्य" — Noto Sans Devanagari Medium, Forest Green at 68% -->
   <text
     x="121"
     y="88"
     font-family="'Noto Sans Devanagari', 'Mukta', sans-serif"
     font-size="19"
     font-weight="500"
-    fill="#1A3A5C"
+    fill="#1E4D35"
     opacity="0.68"
   >लेख्य</text>
 </svg>
