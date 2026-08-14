@@ -41,7 +41,10 @@
     .card h2{margin:6px 0 0;font-size:1.35rem;letter-spacing:-.02em}
     .card .kicker{color:var(--gold);font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
     .card p{color:var(--muted);margin:0;line-height:1.55;font-size:.97rem}
-    .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:10px}
+    /* Whole card opens the app page; .links sit above the overlay so they stay clickable. */
+    .card .cover{position:absolute;inset:0;z-index:1}
+    .card:focus-within{border-color:rgba(255,255,255,.28)}
+    .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:10px;position:relative;z-index:2}
     .links a{
       text-decoration:none;font-weight:700;font-size:.85rem;color:var(--ink);
       border:1px solid var(--card-line);border-radius:999px;padding:7px 14px;transition:background .15s ease,border-color .15s ease;
@@ -64,28 +67,28 @@
 
     <main class="grid">
       <!-- Hoopie Loopie -->
-      <article class="card">
+      <article class="card" data-play="https://play.google.com/store/apps/details?id=com.btech.hoopieloopie">
+        <a class="cover" href="./hoopieloopie/" aria-label="Hoopie Loopie"></a>
         <div class="badge"><img src="./hoopieloopie/icon.png" alt="Hoopie Loopie app icon" width="64" height="64" loading="lazy"></div>
         <div class="kicker">Memory game · Ages 4+</div>
         <h2>Hoopie Loopie</h2>
         <p>Loop it, remember it! Three mini-games, pass-and-play multiplayer, and 80 levels across 8 worlds.</p>
         <div class="links">
-          <a class="primary" href="https://play.google.com/store/apps/details?id=com.btech.hoopieloopie" target="_blank" rel="noopener">▶ Google Play</a>
-          <a href="./hoopieloopie/">Open ↗</a>
+          <a class="primary dl" href="https://play.google.com/store/apps/details?id=com.btech.hoopieloopie" target="_blank" rel="noopener">↓ Download</a>
           <a href="./hoopieloopie/privacy.html">Privacy</a>
           <a href="./hoopieloopie/data-safety.html">Data Safety</a>
         </div>
       </article>
 
       <!-- Lekhya -->
-      <article class="card">
+      <article class="card" data-play="https://play.google.com/store/apps/details?id=com.btech.lekhya">
+        <a class="cover" href="./lekhya/" aria-label="Lekhya"></a>
         <div class="badge"><img src="./lekhya/assets/icon-192.png" alt="Lekhya app icon" width="64" height="64" loading="lazy"></div>
         <div class="kicker">Money manager · Offline</div>
         <h2>Lekhya</h2>
         <p>Spends, budgets, savings, investments and shared expenses — all on your phone. No account, no cloud, no ads.</p>
         <div class="links">
-          <a class="primary" href="https://play.google.com/store/apps/details?id=com.btech.lekhya" target="_blank" rel="noopener">▶ Google Play</a>
-          <a href="./lekhya/">Open ↗</a>
+          <a class="primary dl" href="https://play.google.com/store/apps/details?id=com.btech.lekhya" target="_blank" rel="noopener">↓ Download</a>
           <a href="./lekhya/privacy.html">Privacy</a>
           <a href="./lekhya/data-safety.html">Data Safety</a>
         </div>
@@ -103,5 +106,22 @@
       Built by gvbapps · <a href="mailto:vinosmig@gmail.com">vinosmig@gmail.com</a>
     </footer>
   </div>
+
+  <script>
+    // Route the Download CTA to the visitor's store. Markup defaults to Play, so
+    // this only ever has to handle the iOS case — no JS still gets you a live link.
+    // ponytail: no App Store listings yet; add data-ios="<url>" to a card and it routes there.
+    (function () {
+      var ua = navigator.userAgent || '';
+      if (!(/iPhone|iPad|iPod/.test(ua) || (/Mac/.test(ua) && 'ontouchend' in document))) return;
+      document.querySelectorAll('.card[data-play] .dl').forEach(function (dl) {
+        var ios = dl.closest('.card').dataset.ios;
+        if (ios) { dl.href = ios; return; }
+        dl.removeAttribute('href');
+        dl.removeAttribute('target');
+        dl.textContent = 'Coming to App Store';
+      });
+    })();
+  </script>
 </body>
 </html>
