@@ -37,6 +37,7 @@
     .card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.09)}
     .card .badge{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:34px;
       background:linear-gradient(150deg,var(--violet),#FF9E3D);box-shadow:0 10px 26px rgba(166,125,255,.35)}
+    .card .badge img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}
     .card h2{margin:6px 0 0;font-size:1.35rem;letter-spacing:-.02em}
     .card .kicker{color:var(--gold);font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
     .card p{color:var(--muted);margin:0;line-height:1.55;font-size:.97rem}
@@ -64,7 +65,7 @@
     <main class="grid">
       <!-- Hoopie Loopie -->
       <article class="card">
-        <div class="badge">🎡</div>
+        <div class="badge"><img src="./hoopieloopie/icon.png" alt="Hoopie Loopie app icon" width="64" height="64" loading="lazy"></div>
         <div class="kicker">Memory game · Ages 4+</div>
         <h2>Hoopie Loopie</h2>
         <p>Loop it, remember it! Three mini-games, pass-and-play multiplayer, and 80 levels across 8 worlds.</p>
@@ -78,7 +79,7 @@
 
       <!-- Lekhya -->
       <article class="card">
-        <div class="badge">📒</div>
+        <div class="badge"><img src="./lekhya/assets/icon-192.png" alt="Lekhya app icon" width="64" height="64" loading="lazy"></div>
         <div class="kicker">Money manager · Offline</div>
         <h2>Lekhya</h2>
         <p>Spends, budgets, savings, investments and shared expenses — all on your phone. No account, no cloud, no ads.</p>
