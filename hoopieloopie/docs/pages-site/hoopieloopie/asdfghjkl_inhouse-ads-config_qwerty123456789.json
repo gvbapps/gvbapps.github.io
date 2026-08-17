@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-16T00:00:00Z",
+  "basePath": "https://gvbapps.github.io/hoopieloopie",
+  "creatives": {
+    "partnership-v1": {
+      "id": "partnership-v1",
+      "mediaType": "fullscreen-image",
+      "asset": "/creatives/partnership-1080x1920.png",
+      "headline": "Your ad can grow here! 🌱",
+      "brandLine": "Hoopie Loopie",
+      "subhead": "Want your brand in front of Hoopie Loopie players?",
+      "cta": {
+        "label": "📧 Contact us — advertise here",
+        "action": "ad-inquiry"
+      },
+      "priority": 1,
+      "weight": 100,
+      "timeSlots": null,
+      "caps": {
+        "perDay": 8,
+        "minGapMs": 60000
+      }
+    }
+  },
+  "slots": {
+    "hl-rewarded-01": {
+      "id": "hl-rewarded-01",
+      "kind": "rewarded",
+      "primary": {
+        "provider": "admob",
+        "enabled": true
+      },
+      "fallbacks": [
+        "partnership-v1"
+      ],
+      "mediaTypes": [
+        "fullscreen-image",
+        "video"
+      ],
+      "caps": {
+        "perDay": 8,
+        "minGapMs": 60000
+      },
+      "rewardFraction": 0.5,
+      "durationSec": 5
+    },
+    "hl-interstitial-01": {
+      "id": "hl-interstitial-01",
+      "kind": "interstitial",
+      "primary": {
+        "provider": "admob",
+        "enabled": true
+      },
+      "fallbacks": [
+        "partnership-v1"
+      ],
+      "mediaTypes": [
+        "fullscreen-image",
+        "video"
+      ],
+      "caps": {
+        "perDay": 10,
+        "minGapMs": 60000
+      },
+      "rewardFraction": 0,
+      "durationSec": 4
+    },
+    "hl-banner-01": {
+      "id": "hl-banner-01",
+      "kind": "banner",
+      "primary": {
+        "provider": "admob",
+        "enabled": true
+      },
+      "fallbacks": [],
+      "mediaTypes": [
+        "banner"
+      ],
+      "rewardFraction": 0,
+      "heightDp": 50
+    },
+    "hl-shop-banner-01": {
+      "id": "hl-shop-banner-01",
+      "kind": "banner",
+      "primary": {
+        "provider": "admob",
+        "enabled": true
+      },
+      "fallbacks": [],
+      "mediaTypes": [
+        "banner"
+      ],
+      "rewardFraction": 0,
+      "heightDp": 50
+    }
+  }
+}
