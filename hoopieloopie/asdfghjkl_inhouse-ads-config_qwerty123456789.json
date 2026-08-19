@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-16T00:00:00Z",
+  "updatedAt": "2026-08-17T00:00:00Z",
   "basePath": "https://gvbapps.github.io/hoopieloopie",
   "creatives": {
     "partnership-v1": {
       "id": "partnership-v1",
       "mediaType": "fullscreen-image",
-      "asset": "/creatives/partnership-1080x1920.png",
+      "asset": "/creatives/partnership-1024.png",
       "headline": "Your ad can grow here! 🌱",
       "brandLine": "Hoopie Loopie",
       "subhead": "Want your brand in front of Hoopie Loopie players?",
