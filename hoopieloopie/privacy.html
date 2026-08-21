@@ -47,7 +47,7 @@
     <ul>
       <li><strong>We do not collect, store, transmit, sell, rent, or share your personal information.</strong> The App has no backend server and no user accounts.</li>
       <li><strong>All game data stays on your device.</strong> Progress, coins, scores, settings, and any photos you add never leave your device through anything we operate.</li>
-      <li><strong>Ads are served by Google AdMob in child-directed, non-personalized mode</strong> with the strictest content rating (G / General audiences).</li>
+      <li><strong>Ads are served by Google AdMob.</strong> Children (and anyone who does not confirm they are a grown-up) get child-directed, non-personalized ads with no advertising identifier; adults may get personalized ads only with consent. Every ad uses the strictest content rating (G / General audiences).</li>
       <li><strong>Leaderboards and achievements are optional</strong> and handled by Google Play Games Services (Android) / Apple Game Center (iOS) under Google's and Apple's own privacy policies.</li>
       <li><strong>The one-time "Remove Ads" purchase is processed entirely by the app store.</strong> We never see or handle your payment details.</li>
     </ul>
@@ -82,13 +82,21 @@
 
     <h2>4. Advertising (Google AdMob)</h2>
     <p>The App is free and supported by advertising served through <strong>Google AdMob</strong>, a
-      service of Google LLC. Because Hoopie Loopie is designed for families and children, we configure
-      AdMob in its most protective mode on every launch:</p>
+      service of Google LLC. Hoopie Loopie is a <strong>mixed-audience</strong> app for children and
+      adults. On first launch we ask a single neutral question — your year of birth — and use it only
+      to decide how ads are served. We never store your birthday, only whether you are a grown-up.</p>
     <ul>
-      <li><strong>Child-directed treatment is enabled</strong> (<code>tagForChildDirectedTreatment</code>), invoking COPPA-compliant ad serving.</li>
-      <li><strong>Under-age-of-consent treatment is enabled</strong> (<code>tagForUnderAgeOfConsent</code>), invoking GDPR "GDPR-K" protections for users in the EEA/UK.</li>
-      <li><strong>Maximum ad content rating is set to G (General audiences)</strong> — the strictest rating Google offers.</li>
-      <li>In this configuration Google <strong>disables personalized advertising and interest-based profiling</strong> for ad requests from the App. The App does not request the device advertising identifier (the Android <code>AD_ID</code> permission is not declared).</li>
+      <li><strong>Children (under 13) and anyone who does not answer:</strong> ads are served in Google's
+        most protective mode — <strong>child-directed treatment</strong> (<code>tagForChildDirectedTreatment</code>)
+        and <strong>under-age-of-consent treatment</strong> (<code>tagForUnderAgeOfConsent</code>) are enabled,
+        personalized advertising and interest-based profiling are <strong>disabled</strong>, and the device
+        advertising identifier (Android Advertising ID / iOS IDFA) is <strong>not used</strong>.</li>
+      <li><strong>Adults (13 and older):</strong> ads may be <strong>personalized</strong>, and the advertising
+        identifier may be used, but only where you have given the applicable consent — Google's EEA/UK consent
+        form (UMP) on Android, and Apple's App Tracking Transparency prompt on iOS. If you decline, ads remain
+        non-personalized.</li>
+      <li><strong>Maximum ad content rating is set to G (General audiences)</strong> for <em>every</em> user,
+        child or adult — the strictest rating Google offers.</li>
     </ul>
     <p>To serve and measure ads, Google's SDK may process limited technical data on Google's systems,
       such as a device's IP address (as part of ordinary internet communication), non-persistent device
@@ -131,11 +139,12 @@
       children's accounts is governed by the parental controls of Google Play / Apple Family Sharing.</p>
 
     <h2>8. Children's Privacy (COPPA, GDPR-K, and Similar Laws)</h2>
-    <p>Hoopie Loopie is designed to be enjoyed by children as part of a mixed family audience, and we
-      treat <strong>all users as children for data-protection purposes</strong>:</p>
+    <p>Hoopie Loopie is a mixed-audience app for children and adults. We give
+      <strong>children the full protections of a child-directed app</strong>, and use a neutral age
+      screen so only self-identified adults are ever treated as a general audience:</p>
     <ul>
       <li>We do not knowingly collect personal information from anyone, including children under 13 (US COPPA), under 16 (EEA GDPR), or the applicable age of digital consent in your jurisdiction.</li>
-      <li>Ad serving is locked to child-directed, non-personalized mode for <strong>every user</strong>, not just those identified as children (Section 4).</li>
+      <li>Any user who is under 13, or who does not confirm they are a grown-up, is served child-directed, non-personalized ads with no advertising identifier (Section 4). Only self-identified adults, with consent, may receive personalized ads.</li>
       <li>The App contains no chat, no social features, no user-generated content sharing, no external links presented to children except legally required notices, and no data-collection forms.</li>
       <li>Because we collect nothing, there is nothing for a parent to request, review, or delete from us — everything lives on the family's own device and is removed by uninstalling the App.</li>
     </ul>
@@ -170,7 +179,7 @@
     <table>
       <thead><tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Data involved</th><th>Policy</th></tr></thead>
       <tbody>
-        <tr><td>AdMob</td><td>Google LLC</td><td>Advertising (child-directed, non-personalized, rating G)</td><td>Technical/ad-interaction data processed by Google</td><td><a href="https://policies.google.com/privacy">link</a></td></tr>
+        <tr><td>AdMob</td><td>Google LLC</td><td>Advertising — child-directed &amp; non-personalized for children/unconfirmed users; personalized only for consenting adults; rating G for all</td><td>Technical/ad-interaction data processed by Google</td><td><a href="https://policies.google.com/privacy">link</a></td></tr>
         <tr><td>Play Games Services</td><td>Google LLC</td><td>Optional leaderboards &amp; achievements</td><td>Gamer profile + scores, managed by Google</td><td><a href="https://policies.google.com/privacy">link</a></td></tr>
         <tr><td>Game Center</td><td>Apple Inc.</td><td>Optional leaderboards &amp; achievements (iOS)</td><td>Gamer profile + scores, managed by Apple</td><td><a href="https://www.apple.com/legal/privacy/">link</a></td></tr>
         <tr><td>Play Billing / StoreKit</td><td>Google / Apple</td><td>One-time Remove Ads purchase</td><td>Payment handled entirely by the store</td><td>store policies</td></tr>
@@ -198,7 +207,8 @@
 
     <p class="note">This policy reflects the actual technical behavior of the App as shipped: no
       accounts, no analytics, no data collection by the developer, on-device storage only, child-directed
-      non-personalized advertising, and optional store-managed game services and purchases.</p>
+      non-personalized advertising for children (personalized only for consenting adults), and optional
+      store-managed game services and purchases.</p>
   </div>
 </body>
 </html>

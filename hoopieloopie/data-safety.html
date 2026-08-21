@@ -47,7 +47,7 @@
     <ul>
       <li><span class="pill">No accounts</span> No sign-up, login, or profile with us.</li>
       <li><span class="pill">No developer server</span> Game data (progress, coins, photos you add) stays on your device.</li>
-      <li><span class="pill">No tracking</span> Ads are child-directed and non-personalized; we run no analytics, crash, attribution, or social SDKs.</li>
+      <li><span class="pill">Kids not tracked</span> Children (and anyone who doesn't confirm they're a grown-up) get child-directed, non-personalized ads with no advertising ID; only consenting adults may get personalized ads. We run no analytics, crash, attribution, or social SDKs.</li>
       <li><span class="pill">No selling or sharing</span> We do not sell or share personal information (CCPA/CPRA), and have not in the past 12 months.</li>
       <li><span class="pill">Encrypted in transit</span> All SDK network traffic uses HTTPS/TLS.</li>
     </ul>
@@ -59,9 +59,9 @@
       <thead><tr><th>Data type</th><th>Collected by</th><th>Purpose</th><th>Shared</th></tr></thead>
       <tbody>
         <tr>
-          <td><strong>Device or other IDs</strong><br><span style="color:var(--muted);font-size:.9em">App-set / device identifier. <strong>Not the advertising ID</strong> — the app does not request the Android <code>AD_ID</code> permission.</span></td>
+          <td><strong>Device or other IDs</strong><br><span style="color:var(--muted);font-size:.9em">App-set / device identifier for all users. The <strong>advertising ID (Android) / IDFA (iOS)</strong> is used <strong>only for consenting adults</strong> — children and unconfirmed users are never tracked.</span></td>
           <td>Google AdMob SDK</td>
-          <td>App functionality — ad frequency capping &amp; contextual (non-personalized) ad serving</td>
+          <td>App functionality (frequency capping / contextual serving) for all; Advertising (personalized) for consenting adults</td>
           <td>No</td>
         </tr>
         <tr>
@@ -91,10 +91,11 @@
     </ul>
 
     <h2>Children &amp; families</h2>
-    <p>Hoopie Loopie is built for a mixed family audience and treats <strong>every user as a child</strong>
-      for data protection. Advertising is locked to <strong>child-directed, non-personalized</strong> mode
-      (COPPA / GDPR-K) for all users, with the strictest G / General content rating. There is no chat, no
-      social features, and no user-generated content sharing.</p>
+    <p>Hoopie Loopie is a mixed-audience app for children and adults. A neutral one-time age screen gives
+      <strong>children the full protections of a child-directed app</strong> — child-directed,
+      non-personalized advertising with no advertising ID (COPPA / GDPR-K) — while only self-identified
+      adults, with consent, may receive personalized ads. Every ad uses the strictest G / General content
+      rating. There is no chat, no social features, and no user-generated content sharing.</p>
 
     <h2>Deletion &amp; your control</h2>
     <ul>
