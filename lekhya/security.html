@@ -88,6 +88,7 @@
         <tr><td>Backup files (<code>.lkh</code>)</td><td>AES-256-GCM. The key is derived from your passphrase with PBKDF2 at 310,000 iterations and a random 16-byte salt. The passphrase is never stored anywhere.</td></tr>
         <tr><td>Bank message text at rest</td><td>AES-256-GCM, with a random key held in the Android Keystore or iOS Keychain — hardware-backed storage no other app can read.</td></tr>
         <tr><td>Card numbers</td><td>Never stored in full. Any run of five or more digits is masked before saving, so at most the last four survive. No CVV or PIN is ever stored, or asked for.</td></tr>
+        <tr><td>Scheduled backups (Pro)</td><td>The same encrypted <code>.lkh</code> file, written daily or weekly to a folder you pick. If that folder is in your iCloud Drive, iOS syncs the already-encrypted file; Lekhya opens no connection.</td></tr>
         <tr><td>OS cloud backup</td><td>The database is explicitly excluded from Android's automatic backup and from device-to-device transfer, so your finances cannot leak during a phone migration.</td></tr>
         <tr><td>App Lock</td><td>Fingerprint, face or device PIN, handled entirely by the OS. Lekhya never stores a PIN of its own. The app also hides its contents in the task switcher.</td></tr>
       </tbody>
