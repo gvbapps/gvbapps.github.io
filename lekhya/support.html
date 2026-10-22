@@ -41,19 +41,24 @@
 
   <h2>Getting payments to record themselves</h2>
 
-  <h3>Android — notification capture (recommended)</h3>
-  <p>Open <em>Settings → Transaction Capture</em> in Lekhya and turn on notification access.
-    Android will take you to a system screen where you grant Lekhya permission to read
-    notifications. After that, when your bank or UPI app posts a payment alert, Lekhya files it
-    automatically.</p>
+  <h3>Android — Auto-record (recommended)</h3>
+  <p>Open <em>Settings → Transaction Capture → Set up Auto-record</em> in Lekhya. Android will
+    take you to a system screen called "Notification access" where you allow Lekhya to read
+    notifications. After that, every financial transaction alert that reaches your phone —
+    bank, card, UPI and wallet SMS, and payment app notifications — is recorded automatically.
+    Everything else is ignored, and your SMS inbox is never read.</p>
   <p>If nothing is being captured: confirm the permission is still granted (some phones revoke
     it after an update or when battery optimisation kicks in), and check that your bank's alerts
     actually appear in your notification shade — Lekhya can only see what your phone shows you.</p>
 
-  <h3>iPhone — share or copy</h3>
-  <p>Apple does not let any app read your Messages or another app's notifications. This is an
-    iOS restriction and applies to every app, not just Lekhya. On iPhone you have four ways:</p>
+  <h3>iPhone — Auto-record, share or copy</h3>
+  <p>Apple does not let any app read your Messages or another app's notifications on its own.
+    This is an iOS restriction and applies to every app, not just Lekhya. On iPhone you have
+    these ways:</p>
   <ul>
+    <li><strong>Auto-record:</strong> <em>Settings → Transaction Capture → Set up Auto-record
+      (Shortcut)</em> walks you through a one-time Shortcuts "Message" automation that hands each
+      message to Lekhya. Lekhya keeps the transaction ones and ignores the rest, on your phone.</li>
     <li><strong>Share:</strong> open the bank message in Messages, tap share, choose Lekhya.</li>
     <li><strong>Copy:</strong> copy the message; when you next open Lekhya it offers to file it.
       The text reaches the app only when you tap the system paste button, so nothing is read
@@ -102,6 +107,11 @@
   <p><em>Settings → Backup</em> → export an encrypted <code>.lkh</code> file. You choose a
     passphrase; the file is useless to anyone without it. Keep it wherever you like — cloud
     storage is fine, because the file is encrypted before it leaves the app.</p>
+  <p><strong>Scheduled backups (Pro):</strong> in the same screen, turn on automatic backups,
+    pick daily or weekly and a time. On iPhone, choose a folder on the phone or in your iCloud
+    Drive (iCloud keeps it safe if you lose the phone). On Android the file goes to a folder on
+    your phone; copy it somewhere else, or sync that folder with a drive app, so it survives
+    losing the phone.</p>
 
   <div class="legal-callout">
     <p><strong>If you forget the passphrase, the backup cannot be opened — by us, by you, or by

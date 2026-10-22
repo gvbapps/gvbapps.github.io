@@ -26,7 +26,7 @@
 
   <div class="legal-head">
     <h1>Privacy Policy</h1>
-    <p class="legal-meta">Effective 13 August 2026 · Version 1.0 · Applies to Lekhya for Android and iOS</p>
+    <p class="legal-meta">Effective 22 October 2026 · Version 1.1 · Applies to Lekhya for Android and iOS</p>
     <a class="legal-lang" href="privacy.hi.html" lang="hi">हिन्दी में पढ़ें</a>
   </div>
 
@@ -37,6 +37,9 @@
       platforms — so your financial information cannot leave your device, even by accident.
       This is not a promise about how we behave. It is a property of how the app is built,
       and you can verify it yourself.</p>
+    <p>The one thing that can leave your phone is a backup <em>you</em> decide to keep
+      elsewhere — for example in a folder in your own iCloud Drive — and it is encrypted with
+      your passphrase, so nobody else can open it. No spam calls, no third parties, ever.</p>
   </div>
 
   <div class="legal-toc">
@@ -52,6 +55,7 @@
       <li><a href="#children">8. Children</a></li>
       <li><a href="#changes">9. Changes to this policy</a></li>
       <li><a href="#contact">10. Contact</a></li>
+      <li><a href="#feedback-form">11. Website feedback form</a></li>
     </ul>
   </div>
 
@@ -73,7 +77,8 @@
     there is nothing for us to put in one. We could not identify you if we wanted to.</p>
 
   <p>We will never use your information to market anything to you, and we will never send
-    you promotional email — we do not have your address.</p>
+    you promotional email or make a marketing call — we do not have your address or your
+    phone number. Nothing is sold, shared or handed to any third party.</p>
 
   <h2 id="device">2. What stays on your device</h2>
 
@@ -85,6 +90,14 @@
   <p>You control all of it. From within the app you can export it as an encrypted
     <code>.lkh</code> backup or as a CSV file, restore it, edit it, or delete it. Uninstalling
     Lekhya removes it permanently.</p>
+
+  <p><strong>Scheduled backups (Pro).</strong> If you turn them on, Lekhya writes an encrypted
+    <code>.lkh</code> backup daily or weekly at the time you choose. On Android it goes to a
+    folder on your phone. On iPhone it goes to a folder you pick — on the iPhone, or in your
+    own iCloud Drive. If you pick an iCloud Drive folder, iOS (not Lekhya) syncs that file to
+    your Apple account, under Apple's terms. The file is encrypted with your passphrase before
+    it is written, so neither Apple nor we can read it. Lekhya itself still opens no network
+    connection.</p>
 
   <h2 id="verify">3. How you can verify this</h2>
 
@@ -116,9 +129,16 @@
       <tbody>
         <tr>
           <td>Notification access</td><td>Android</td>
-          <td>Reads the payment alerts your bank and UPI apps post on your device, so a spend can
-            be recorded without you typing it. The alert is matched against patterns on your
-            phone. Nothing is sent anywhere. Optional.</td>
+          <td>Powers <strong>Auto-record</strong>: reads notifications on your device so the
+            financial transaction alerts among them (bank, card, UPI and wallet SMS, and payment
+            app notifications) can be recorded without you typing them. All other notifications
+            are ignored. Matching happens on your phone. Nothing is sent anywhere. Optional.</td>
+        </tr>
+        <tr>
+          <td>Shortcuts automation</td><td>iOS</td>
+          <td>Auto-record on iPhone: a Shortcuts automation <em>you</em> create hands each message
+            to Lekhya, which keeps only transaction ones. Lekhya cannot read Messages on its own.
+            Optional.</td>
         </tr>
         <tr>
           <td>Notifications</td><td>Both</td>
@@ -132,8 +152,8 @@
         </tr>
         <tr>
           <td>Files</td><td>Both</td>
-          <td>Only when you choose to save a backup or CSV, or open one to restore. Lekhya does
-            not browse your storage.</td>
+          <td>Only to save a backup or CSV you ask for, to write scheduled backups to the folder
+            you picked, or to open a file to restore. Lekhya does not browse your storage.</td>
         </tr>
       </tbody>
     </table>
@@ -222,6 +242,7 @@
       <thead><tr><th>Version</th><th>Date</th><th>Change</th></tr></thead>
       <tbody>
         <tr><td>1.0</td><td>13 August 2026</td><td>First publication, for the 1.0.0 release.</td></tr>
+        <tr><td>1.1</td><td>22 October 2026</td><td>Covers scheduled backups (including an iCloud Drive folder on iPhone), names Auto-record and the iPhone Shortcuts automation, states no spam calls and no third parties, and adds the website feedback form (§11).</td></tr>
       </tbody>
     </table>
   </div>
@@ -231,6 +252,20 @@
   <p>Questions about this policy, or about privacy in Lekhya:</p>
     <p><a href="mailto:vinosmig@gmail.com">vinosmig@gmail.com</a></p>
   <p>We aim to reply within five working days.</p>
+
+  <h2 id="feedback-form">11. Website feedback form</h2>
+
+  <p>This section is about this <strong>website</strong>, not the app. The app still collects
+    nothing.</p>
+
+  <p>The feedback form on the Lekhya home page asks for your name, your email address, whether
+    it is feedback or a feature request, and your message. When you press Send, those details
+    are passed through a Google Apps Script service run by us and emailed to the Lekhya team's
+    inbox (a Google Group). We use them only to read and reply to your message. We do not add
+    you to any list, share them with anyone, or use them for marketing. If the form cannot send,
+    it offers to open your own email app instead; that path does not use Google's script.</p>
+
+  <p>To have a message deleted, write to the address above.</p>
 
   <p class="legal-updated">
     Lekhya · Made in India ·
